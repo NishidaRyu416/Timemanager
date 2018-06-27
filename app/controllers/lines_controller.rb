@@ -29,9 +29,8 @@ class LinesController < ApplicationController
 
   def destroy
     @line=Line.find(params[:id])
-    if @line.destory
-    else
-    end
+    @line.destroy
+    redirect_to lines_path
   end
 
   private
