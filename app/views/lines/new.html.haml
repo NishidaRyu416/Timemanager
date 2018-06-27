@@ -2,7 +2,7 @@
 =form_for(@line) do |f|
   =f.text_field :time
   =f.label :time, '時間'
-  -if Line.last.line_number.present?
+  -if Line.last.present?
     =f.text_field :line_number,value:Line.last.line_number-1
   -else
     =f.text_field :line_number
