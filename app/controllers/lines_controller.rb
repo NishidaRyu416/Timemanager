@@ -23,7 +23,7 @@ class LinesController < ApplicationController
       times+=line.time
     end
     @time=times/Line.all.count
-    @lines_before_you=Line.order(created_at: :desc).where("created_at <=?",@line.created_at).count
+    @lines_before_you=Line.order(created_at: :desc).where("created_at <=?",@line.created_at).count-1
     @time=@time*@lines_before_you
   end
 
