@@ -1,5 +1,5 @@
 %h1 待ち管理
 -@lines.each do|line|
- %p= "number #{line.line_number}"
+ =link_to "number #{line.line_number}",line_path(line.id)
  %p= "time #{line.time}"
  =link_to "削除する", line_path(line.id), method: :delete
