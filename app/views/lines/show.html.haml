@@ -1,0 +1,8 @@
+%h1 あなたの待機状況
+%p= "あなたの前に#{@lines_before_you}人"
+%p待機番号
+=@line.line_number
+%p待機時間
+=@time
+%hr
+=qrcode_tag("http://localhost:3000/lines/#{@line.id}")

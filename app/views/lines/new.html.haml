@@ -1,0 +1,7 @@
+%h1 待機人追加
+=form_for(@line) do |f|
+  =f.text_field :time
+  =f.label :time, '時間'
+  =f.text_field :line_number,value:Line.last.line_number-1
+  =f.label :line_number, '番号'
+  =f.submit "done"
