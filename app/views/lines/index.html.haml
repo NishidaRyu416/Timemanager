@@ -2,3 +2,4 @@
 -@lines.each do|line|
  %p= "number #{line.line_number}"
  %p= "time #{line.time}"
+ =link_to "削除する", line_path(line.id), method: :delete

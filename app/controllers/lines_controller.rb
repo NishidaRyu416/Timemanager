@@ -1,5 +1,5 @@
 class LinesController < ApplicationController
-  before_action :client_area
+  before_action :client_area,except: :show
   def new
     @line=current_user.lines.build
   end
@@ -28,7 +28,10 @@ class LinesController < ApplicationController
   end
 
   def destroy
-
+    @line=Line.find(params[:id])
+    if @line.destory
+    else
+    end
   end
 
   private
