@@ -3,7 +3,7 @@
   =f.text_field :time
   =f.label :time, '時間'
   -if Line.last.present?
-    =f.text_field :line_number,value:Line.last.line_number-1
+    =f.text_field :line_number,value:Line.last.line_number+1
   -else
     =f.text_field :line_number
   =f.label :line_number, '番号'
