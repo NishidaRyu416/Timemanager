@@ -5,4 +5,4 @@
 %p待機時間
 =@time
 %hr
-=qrcode_tag("http://localhost:3000/lines/#{@line.id}")
+=qrcode_tag("#{line_path(id:@line.id)}")
